@@ -13,8 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SecurityScheme(name = "user-api", scheme = "bearer", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER, bearerFormat = "JWT")
 @OpenAPIDefinition(
 		info = @Info(
-				title = "selsup test application API",
-				description = "Projects control system", version = "1.0.0",
+				title = "demo application",
+				description = "Demo system", version = "1.0.0",
 				contact = @Contact(
 						name = "Sergei Nefedov",
 						email = "s.nefedov@zohomail.com"
