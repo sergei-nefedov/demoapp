@@ -32,10 +32,13 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(authorize -> authorize.requestMatchers("/auth/**", "/v3/api-docs/**",
+                .authorizeHttpRequests(authorize -> authorize.requestMatchers(
+                                "/auth/**",
+                                "/v3/api-docs/**",
                                 "/configuration/ui",
                                 "/swagger-resources/**",
                                 "/configuration/security",
+                                "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/webjars/**").permitAll()
                         .anyRequest().authenticated())
